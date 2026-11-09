@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ka" class="h-full scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ელენე ჭაბუკიანის პორტფოლიო - მთავარი გვერდი">
+    <title>მთავარი | ელენე ჭაბუკიანის პორტფოლიო</title>
+    <!-- Google Fonts: Plus Jakarta Sans & Noto Sans Georgian -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', '"Noto Sans Georgian"', '-apple-system', 'BlinkMacSystemFont', 'system-ui', 'sans-serif'],
+                    },
+                    colors: {
+                        navy: {
+                            950: '#060A14',
+                            900: '#0B1120',
+                            850: '#0F182E',
+                            800: '#14213D',
+                            700: '#1E2F54',
+                        },
+                        cyanaccent: {
+                            300: '#7DD3FC',
+                            400: '#38BDF8',
+                            500: '#06B6D4',
+                            600: '#0284C7',
+                        }
+                    },
+                    boxShadow: {
+                        'glow-cyan': '0 0 25px -3px rgba(6, 182, 212, 0.4)',
+                        'glow-lg': '0 0 45px -10px rgba(56, 189, 248, 0.3)',
+                        'card-dark': '0 10px 30px -5px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(56, 189, 248, 0.12)',
+                        'card-hover': '0 20px 40px -10px rgba(6, 182, 212, 0.25), 0 0 0 1px rgba(56, 189, 248, 0.35)',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="min-h-full bg-[#0B1120] text-slate-100 font-sans antialiased flex flex-col justify-between selection:bg-cyan-500 selection:text-slate-950">
+
+    <!-- საიტის ზედა ნაწილი და რესპონსიული ნავიგაცია -->
+    <header class="sticky top-0 z-50 bg-[#0B1120]/85 backdrop-blur-xl border-b border-cyan-500/15 transition-all">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex items-center justify-between">
+            <!-- ლოგო / სახელი -->
+            <a href="index.html" class="flex items-center gap-3 group focus:outline-none">
+                <div class="relative w-11 h-11 rounded-2xl overflow-hidden ring-2 ring-cyan-400/80 shadow-glow-cyan group-hover:scale-105 group-hover:rotate-2 transition-all bg-navy-850">
+                    <img src="download.jpg" alt="ელენე ჭაბუკიანი" class="w-full h-full object-cover">
+                </div>
+                <div class="flex flex-col">
+                    <h1 class="text-lg sm:text-xl font-bold tracking-tight text-white group-hover:text-cyan-400 transition-colors">ელენე ჭაბუკიანი</h1>
+                    <p class="text-xs font-medium text-cyan-300/80"><strong class="font-medium text-cyan-400">Junior Web Developer / ვებ-დეველოპერი</strong></p>
+                </div>
+            </a>
+
+            <!-- დესკტოპ ნავიგაცია -->
+            <nav aria-label="მთავარი ნავიგაცია" class="hidden md:block">
+                <ul class="inline-flex items-center p-1 rounded-full bg-navy-850/90 border border-cyan-500/20 shadow-lg text-sm">
+                    <li><strong class="inline-block px-4 py-1.5 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium shadow-glow-cyan">მთავარი</strong></li>
+                    <li><a href="about.html" class="inline-block px-4 py-1.5 rounded-full text-slate-300 hover:text-white hover:bg-cyan-500/10 font-medium transition-all">ჩემ შესახებ</a></li>
+                    <li><a href="projects.html" class="inline-block px-4 py-1.5 rounded-full text-slate-300 hover:text-white hover:bg-cyan-500/10 font-medium transition-all">პროექტები</a></li>
+                    <li><a href="employees.html" class="inline-block px-4 py-1.5 rounded-full text-slate-300 hover:text-white hover:bg-cyan-500/10 font-medium transition-all">თანამშრომლები</a></li>
+                    <li><a href="contact.html" class="inline-block px-4 py-1.5 rounded-full text-slate-300 hover:text-white hover:bg-cyan-500/10 font-medium transition-all">კონტაქტი</a></li>
+                </ul>
+            </nav>
+
+            <!-- მობილური / ტაბლეტის ბურგერ ღილაკი -->
+            <button id="mobile-menu-btn" type="button" class="md:hidden inline-flex items-center justify-center w-11 h-11 rounded-2xl bg-navy-850 border border-cyan-500/20 text-slate-200 hover:text-cyan-400 hover:border-cyan-400/50 focus:outline-none focus:ring-2 focus:ring-cyan-400 transition-all shadow-md" aria-controls="mobile-menu" aria-expanded="false" aria-label="მენიუს გახსნა">
+                <svg id="menu-icon-open" class="w-6 h-6 block transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+                <svg id="menu-icon-close" class="w-6 h-6 hidden transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- მობილური ჩამოსაშლელი მენიუ -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-cyan-500/20 bg-[#0B1120]/98 backdrop-blur-2xl px-4 pt-3 pb-5 shadow-2xl transition-all animate-fadeIn">
+            <ul class="flex flex-col space-y-1.5 text-sm font-medium">
+                <li><strong class="flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-glow-cyan">
+                    <span class="w-2 h-2 rounded-full bg-white"></span> მთავარი
+                </strong></li>
+                <li><a href="about.html" class="flex items-center gap-2.5 px-4 py-2.5 rounded-xl text-slate-300 hover:text-cyan-400 hover:bg-navy-850 transition-all">
+                    <span class="w-2 h-2 rounded-full bg-cyan-400"></span> ჩემ შესახებ
+                </a></li>
+                <li><a href="projects.html" class="flex items-center gap-2.5 px-4 py-2.5 rounded-xl text-slate-300 hover:text-cyan-400 hover:bg-navy-850 transition-all">
+                    <span class="w-2 h-2 rounded-full bg-cyan-400"></span> პროექტები
+                </a></li>
+                <li><a href="employees.html" class="flex items-center gap-2.5 px-4 py-2.5 rounded-xl text-slate-300 hover:text-cyan-400 hover:bg-navy-850 transition-all">
+                    <span class="w-2 h-2 rounded-full bg-cyan-400"></span> თანამშრომლები
+                </a></li>
+                <li><a href="contact.html" class="flex items-center gap-2.5 px-4 py-2.5 rounded-xl text-slate-300 hover:text-cyan-400 hover:bg-navy-850 transition-all">
+                    <span class="w-2 h-2 rounded-full bg-cyan-400"></span> კონტაქტი
+                </a></li>
+            </ul>
+        </div>
+    </header>
+
+    <hr class="border-0 h-px bg-cyan-500/10 hidden">
+
+    <!-- მთავარი შიგთავსი -->
+    <main class="max-w-5xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-14 space-y-10 sm:space-y-12 flex-1">
+        <!-- მისალმების სექცია (Hero Banner) -->
+        <section class="relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-navy-850 via-[#0E172A] to-navy-900 border border-cyan-500/20 p-7 sm:p-10 lg:p-12 shadow-card-dark transition-all">
+            <!-- კიბერ/დეველოპერული ambient glow ეფექტები -->
+            <div class="absolute -top-24 -right-24 w-80 sm:w-96 h-80 sm:h-96 bg-cyan-500/15 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute -bottom-24 -left-24 w-72 sm:w-80 h-72 sm:h-80 bg-blue-600/15 rounded-full blur-3xl pointer-events-none"></div>
+            
+            <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+                <!-- მარცხენა მხარე: ტექსტი, ავატარი და ღილაკები -->
+                <div class="lg:col-span-7 space-y-5">
+                    <div class="flex flex-wrap items-center gap-3">
+                        <div class="inline-flex items-center gap-2.5 p-1 pr-3.5 rounded-full bg-navy-800/90 border border-cyan-500/30 shadow-md">
+                            <img src="download.jpg" alt="ელენე ჭაბუკიანი" class="w-7 h-7 rounded-full object-cover ring-1 ring-cyan-400">
+                            <span class="text-xs font-semibold text-slate-200">ელენე ჭაბუკიანი</span>
+                        </div>
+                        <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold bg-cyan-950/70 text-cyan-300 border border-cyan-500/40 shadow-xs">
+                            <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
+                            ღიაა ახალი შესაძლებლობებისთვის
+                        </span>
+                    </div>
+
+                    <h2 class="text-2xl sm:text-4xl lg:text-[2.5rem] font-extrabold tracking-tight text-white leading-[1.25]">
+                        მოგესალმებით ჩემს პორტფოლიოზე!
+                    </h2>
+
+                    <article class="space-y-3.5 text-slate-300 text-base sm:text-lg leading-relaxed font-normal">
+                        <p>
+                            გამარჯობა! მე ვარ <span class="font-semibold text-cyan-300">ელენე ჭაბუკიანი</span>, დამწყები ვებ-დეველოპერი.
+                            ეს არის ჩემი პირადი პორტფოლიო, სადაც შეგიძლიათ გაეცნოთ ჩემს გამოცდილებას, უნარებსა და შესრულებულ პროექტებს.
+                        </p>
+                        <p class="text-slate-400 text-sm sm:text-base">
+                            გვერდებს შორის გადასაადგილებლად შეგიძლიათ ისარგებლოთ ზემოთ მოცემული ნავიგაციით.
+                        </p>
+                    </article>
+
+                    <div class="pt-2 flex flex-wrap items-center gap-3.5">
+                        <a href="projects.html" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-medium text-sm transition-all shadow-glow-cyan hover:shadow-glow-lg hover:-translate-y-0.5">
+                            <span>პროექტების დათვალიერება</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                        <a href="contact.html" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-navy-800/90 text-slate-200 font-medium text-sm hover:bg-navy-700 border border-cyan-500/25 transition-all hover:border-cyan-400 shadow-sm">
+                            <span>კონტაქტი</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- მარჯვენა მხარე: developmentt.jpg ილუსტრაცია/ფოტო -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none group">
+                        <!-- დეკორატიული ცისფერი ნეონ ჩარჩო -->
+                        <div class="absolute -inset-1.5 bg-gradient-to-tr from-cyan-500 via-blue-500 to-sky-400 rounded-[2rem] blur-md opacity-40 group-hover:opacity-75 transition duration-500"></div>
+                        
+                        <div class="relative overflow-hidden rounded-[1.8rem] border border-cyan-500/30 bg-navy-900 shadow-2xl">
+                            <img src="developmentt.jpg" alt="ვებ დეველოპმენტის პროცესი" class="w-full h-64 sm:h-72 lg:h-80 object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out">
+                            <div class="absolute inset-0 bg-gradient-to-t from-navy-950/80 via-transparent to-transparent pointer-events-none"></div>
+                            <div class="absolute bottom-3 left-3 right-3 p-3 rounded-xl bg-navy-900/90 backdrop-blur-md border border-cyan-500/30 text-xs font-semibold text-slate-200 flex items-center justify-between shadow-lg">
+                                <span class="flex items-center gap-2">
+                                    <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+                                    Web Development
+                                </span>
+                                <span class="text-cyan-400 font-mono font-bold">2026</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- სწრაფი მიმოხილვა -->
+        <section class="space-y-6">
+            <div class="flex items-center justify-between">
+                <div>
+                    <h3 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">სწრაფი მიმოხილვა</h3>
+                    <p class="text-sm text-slate-400 mt-1">ჩემი ფოკუსი და ძირითადი მიმართულებები</p>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
+                <article class="group bg-navy-850/80 rounded-3xl p-7 sm:p-8 border border-cyan-500/15 shadow-card-dark hover:shadow-card-hover hover:border-cyan-400/50 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-cyan-950/70 text-cyan-400 border border-cyan-500/30 flex items-center justify-center mb-5 group-hover:scale-110 group-hover:shadow-glow-cyan transition-all">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                            </svg>
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-3 group-hover:text-cyan-300 transition-colors">საქმიანობა</h4>
+                        <p class="text-slate-300 text-sm sm:text-base leading-relaxed">ვქმნი თანამედროვე, სტრუქტურირებულ და მომხმარებლისთვის მოსახერხებელ ვებ-ინტერფეისებს.</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-700/50 flex items-center gap-2 text-xs font-semibold text-cyan-400">
+                        <span class="inline-block w-2 h-2 rounded-full bg-cyan-400"></span>
+                        სუფთა კოდი &amp; სემანტიკა
+                    </div>
+                </article>
+
+                <article class="group bg-navy-850/80 rounded-3xl p-7 sm:p-8 border border-cyan-500/15 shadow-card-dark hover:shadow-card-hover hover:border-cyan-400/50 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-cyan-950/70 text-cyan-400 border border-cyan-500/30 flex items-center justify-center mb-5 group-hover:scale-110 group-hover:shadow-glow-cyan transition-all">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+                            </svg>
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-3 group-hover:text-cyan-300 transition-colors">ბოლო პროექტები</h4>
+                        <p class="text-slate-300 text-sm sm:text-base leading-relaxed">იხილეთ ჩემი ბოლო ნამუშევრები <a href="projects.html" class="inline-flex items-center font-semibold text-cyan-400 hover:text-cyan-300 underline decoration-cyan-500/40 underline-offset-4 transition-all">პროექტების გვერდზე &rarr;</a></p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-700/50 flex items-center gap-2 text-xs font-semibold text-cyan-400">
+                        <span class="inline-block w-2 h-2 rounded-full bg-cyan-400"></span>
+                        რეალური პრაქტიკული ნამუშევრები
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <hr class="border-0 h-px bg-cyan-500/15 mt-10">
+
+    <!-- საიტის ქვედა ნაწილი -->
+    <footer class="bg-navy-950 py-10 border-t border-cyan-500/15 text-center">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+            <p class="text-sm text-slate-400 font-normal">&copy; 2026 ელენე ჭაბუკიანი. ყველა უფლება დაცულია.</p>
+            <p class="text-xs sm:text-sm text-slate-500 font-medium space-x-1">
+                <a href="index.html" class="text-cyan-400 hover:text-cyan-300 transition-colors font-semibold">მთავარი</a> <span class="text-slate-700">·</span> 
+                <a href="about.html" class="text-slate-400 hover:text-cyan-400 transition-colors">ჩემ შესახებ</a> <span class="text-slate-700">·</span> 
+                <a href="projects.html" class="text-slate-400 hover:text-cyan-400 transition-colors">პროექტები</a> <span class="text-slate-700">·</span> 
+                <a href="employees.html" class="text-slate-400 hover:text-cyan-400 transition-colors">თანამშრომლები</a> <span class="text-slate-700">·</span> 
+                <a href="contact.html" class="text-slate-400 hover:text-cyan-400 transition-colors">კონტაქტი</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- გლობალური JavaScript სკრიპტი (ბურგერ მენიუ, ხელმისაწვდომობა) -->
+    <script src="main.js"></script>
+
+</body>
+</html>

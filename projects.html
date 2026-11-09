@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ka" class="h-full scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ელენე ჭაბუკიანის პორტფოლიო - ჩემი პროექტები">
+    <title>პროექტები | ელენე ჭაბუკიანის პორტფოლიო</title>
+    <!-- Google Fonts: Plus Jakarta Sans & Noto Sans Georgian -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', '"Noto Sans Georgian"', '-apple-system', 'BlinkMacSystemFont', 'system-ui', 'sans-serif'],
+                    },
+                    colors: {
+                        navy: {
+                            950: '#060A14',
+                            900: '#0B1120',
+                            850: '#0F182E',
+                            800: '#14213D',
+                            700: '#1E2F54',
+                        },
+                        cyanaccent: {
+                            300: '#7DD3FC',
+                            400: '#38BDF8',
+                            500: '#06B6D4',
+                            600: '#0284C7',
+                        }
+                    },
+                    boxShadow: {
+                        'glow-cyan': '0 0 25px -3px rgba(6, 182, 212, 0.4)',
+                        'glow-lg': '0 0 45px -10px rgba(56, 189, 248, 0.3)',
+                        'card-dark': '0 10px 30px -5px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(56, 189, 248, 0.12)',
+                        'card-hover': '0 20px 40px -10px rgba(6, 182, 212, 0.25), 0 0 0 1px rgba(56, 189, 248, 0.35)',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="min-h-full bg-[#0B1120] text-slate-100 font-sans antialiased flex flex-col justify-between selection:bg-cyan-500 selection:text-slate-950">
+
+    <!-- საიტის ზედა ნაწილი და რესპონსიული ნავიგაცია -->
+    <header class="sticky top-0 z-50 bg-[#0B1120]/85 backdrop-blur-xl border-b border-cyan-500/15 transition-all">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex items-center justify-between">
+            <!-- ლოგო / სახელი -->
+            <a href="index.html" class="flex items-center gap-3 group focus:outline-none">
+                <div class="relative w-11 h-11 rounded-2xl overflow-hidden ring-2 ring-cyan-400/80 shadow-glow-cyan group-hover:scale-105 group-hover:rotate-2 transition-all bg-navy-850">
+                    <img src="download.jpg" alt="ელენე ჭაბუკიანი" class="w-full h-full object-cover">
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-lg sm:text-xl font-bold tracking-tight text-white group-hover:text-cyan-400 transition-colors">ელენე ჭაბუკიანი</span>
+                    <span class="text-xs font-medium text-cyan-300/80"><strong class="font-medium text-cyan-400">Junior Web Developer / ვებ-დეველოპერი</strong></span>
+                </div>
+            </a>
+
+            <!-- დესკტოპ ნავიგაცია -->
+            <nav aria-label="მთავარი ნავიგაცია" class="hidden md:block">
+                <ul class="inline-flex items-center p-1 rounded-full bg-navy-850/90 border border-cyan-500/20 shadow-lg text-sm">
+                    <li><a href="index.html" class="inline-block px-4 py-1.5 rounded-full text-slate-300 hover:text-white hover:bg-cyan-500/10 font-medium transition-all">მთავარი</a></li>
+                    <li><a href="about.html" class="inline-block px-4 py-1.5 rounded-full text-slate-300 hover:text-white hover:bg-cyan-500/10 font-medium transition-all">ჩემ შესახებ</a></li>
+                    <li><strong class="inline-block px-4 py-1.5 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium shadow-glow-cyan">პროექტები</strong></li>
+                    <li><a href="employees.html" class="inline-block px-4 py-1.5 rounded-full text-slate-300 hover:text-white hover:bg-cyan-500/10 font-medium transition-all">თანამშრომლები</a></li>
+                    <li><a href="contact.html" class="inline-block px-4 py-1.5 rounded-full text-slate-300 hover:text-white hover:bg-cyan-500/10 font-medium transition-all">კონტაქტი</a></li>
+                </ul>
+            </nav>
+
+            <!-- მობილური / ტაბლეტის ბურგერ ღილაკი -->
+            <button id="mobile-menu-btn" type="button" class="md:hidden inline-flex items-center justify-center w-11 h-11 rounded-2xl bg-navy-850 border border-cyan-500/20 text-slate-200 hover:text-cyan-400 hover:border-cyan-400/50 focus:outline-none focus:ring-2 focus:ring-cyan-400 transition-all shadow-md" aria-controls="mobile-menu" aria-expanded="false" aria-label="მენიუს გახსნა">
+                <svg id="menu-icon-open" class="w-6 h-6 block transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+                <svg id="menu-icon-close" class="w-6 h-6 hidden transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- მობილური ჩამოსაშლელი მენიუ -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-cyan-500/20 bg-[#0B1120]/98 backdrop-blur-2xl px-4 pt-3 pb-5 shadow-2xl transition-all animate-fadeIn">
+            <ul class="flex flex-col space-y-1.5 text-sm font-medium">
+                <li><a href="index.html" class="flex items-center gap-2.5 px-4 py-2.5 rounded-xl text-slate-300 hover:text-cyan-400 hover:bg-navy-850 transition-all">
+                    <span class="w-2 h-2 rounded-full bg-cyan-400"></span> მთავარი
+                </a></li>
+                <li><a href="about.html" class="flex items-center gap-2.5 px-4 py-2.5 rounded-xl text-slate-300 hover:text-cyan-400 hover:bg-navy-850 transition-all">
+                    <span class="w-2 h-2 rounded-full bg-cyan-400"></span> ჩემ შესახებ
+                </a></li>
+                <li><strong class="flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-glow-cyan">
+                    <span class="w-2 h-2 rounded-full bg-white"></span> პროექტები
+                </strong></li>
+                <li><a href="employees.html" class="flex items-center gap-2.5 px-4 py-2.5 rounded-xl text-slate-300 hover:text-cyan-400 hover:bg-navy-850 transition-all">
+                    <span class="w-2 h-2 rounded-full bg-cyan-400"></span> თანამშრომლები
+                </a></li>
+                <li><a href="contact.html" class="flex items-center gap-2.5 px-4 py-2.5 rounded-xl text-slate-300 hover:text-cyan-400 hover:bg-navy-850 transition-all">
+                    <span class="w-2 h-2 rounded-full bg-cyan-400"></span> კონტაქტი
+                </a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- მთავარი შიგთავსი -->
+    <main class="max-w-5xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-14 space-y-10 flex-1">
+        <section class="space-y-8">
+            <div>
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-cyan-950/70 text-cyan-300 border border-cyan-500/30 mb-3 shadow-glow-cyan">
+                    <span class="inline-block w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+                    <span>შემოქმედებითი ნამუშევრები</span>
+                </div>
+                <h2 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">შესრულებული პროექტები</h2>
+                <p class="text-slate-400 text-sm sm:text-base mt-2">აქ წარმოდგენილია ჩემი მიმდინარე და დასრულებული პრაქტიკული სამუშაოები:</p>
+            </div>
+
+            <div class="space-y-6">
+                <!-- პროექტი 1 -->
+                <article class="group bg-navy-850/80 rounded-3xl p-7 sm:p-10 border border-cyan-500/15 shadow-card-dark hover:shadow-card-hover hover:border-cyan-400/50 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+                    <div class="space-y-5">
+                        <header>
+                            <div class="flex flex-wrap items-center justify-between gap-3 mb-3">
+                                <h3 class="text-xl sm:text-2xl font-bold text-white group-hover:text-cyan-300 transition-colors">1. პირადი სავიზიტო და პორტფოლიო პლატფორმა</h3>
+                                <span class="w-10 h-10 rounded-2xl bg-cyan-950/80 text-cyan-400 border border-cyan-500/30 font-mono text-xs font-bold flex items-center justify-center shadow-glow-cyan">01</span>
+                            </div>
+                            <p class="text-xs sm:text-sm text-slate-400">
+                                <small class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-navy-800 text-slate-300 font-medium border border-cyan-500/20">
+                                    კატეგორია: ვებ-დეველოპმენტი · მიმართულება: პერსონალური ვებ-გვერდი
+                                </small>
+                            </p>
+                        </header>
+                        
+                        <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                            მრავალგვერდიანი სტრუქტურის მქონე საიტი, რომელიც მოიცავს მთავარ, ბიოგრაფიულ, პროექტებისა და საკონტაქტო მოდულებს.
+                        </p>
+                        
+                        <figure class="m-0">
+                            <figcaption class="p-4 rounded-2xl bg-navy-800/80 border border-cyan-500/20 text-xs sm:text-sm text-slate-200 flex items-center gap-3">
+                                <svg class="w-4 h-4 text-cyan-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span><strong class="font-semibold text-white">დეტალები:</strong> სუფთა არქიტექტურა, ადაპტური დიზაინი და სტანდარტებთან სრული შესაბამისობა.</span>
+                            </figcaption>
+                        </figure>
+                    </div>
+
+                    <p class="mt-8 pt-5 border-t border-slate-700/50">
+                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-medium text-xs sm:text-sm transition-all shadow-glow-cyan hover:shadow-card-hover">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path>
+                            </svg>
+                            <span>პროექტის კოდი GitHub-ზე &rarr;</span>
+                        </a>
+                    </p>
+                </article>
+
+                <hr class="border-0 h-px bg-cyan-500/15">
+
+                <!-- პროექტი 2 -->
+                <article class="group bg-navy-850/80 rounded-3xl p-7 sm:p-10 border border-cyan-500/15 shadow-card-dark hover:shadow-card-hover hover:border-cyan-400/50 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+                    <div class="space-y-5">
+                        <header>
+                            <div class="flex flex-wrap items-center justify-between gap-3 mb-3">
+                                <h3 class="text-xl sm:text-2xl font-bold text-white group-hover:text-cyan-300 transition-colors">2. კაფეს ონლაინ მენიუ</h3>
+                                <span class="w-10 h-10 rounded-2xl bg-cyan-950/80 text-cyan-400 border border-cyan-500/30 font-mono text-xs font-bold flex items-center justify-center shadow-glow-cyan">02</span>
+                            </div>
+                            <p class="text-xs sm:text-sm text-slate-400">
+                                <small class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-navy-800 text-slate-300 font-medium border border-cyan-500/20">
+                                    კატეგორია: ვებ-გვერდის შაბლონი · მიმართულება: ელექტრონული მენიუ
+                                </small>
+                            </p>
+                        </header>
+                        
+                        <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                            მომხმარებელზე ორიენტირებული გვერდი, სადაც წარმოდგენილია კაფეს პროდუქციის ასორტიმენტი, კატეგორიზაცია და ფასები.
+                        </p>
+                    </div>
+
+                    <p class="mt-8 pt-5 border-t border-slate-700/50">
+                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-medium text-xs sm:text-sm transition-all shadow-glow-cyan hover:shadow-card-hover">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path>
+                            </svg>
+                            <span>პროექტის კოდი GitHub-ზე &rarr;</span>
+                        </a>
+                    </p>
+                </article>
+
+                <hr class="border-0 h-px bg-cyan-500/15">
+
+                <!-- პროექტი 3 -->
+                <article class="group bg-navy-850/80 rounded-3xl p-7 sm:p-10 border border-cyan-500/15 shadow-card-dark hover:shadow-card-hover hover:border-cyan-400/50 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+                    <div class="space-y-5">
+                        <header>
+                            <div class="flex flex-wrap items-center justify-between gap-3 mb-3">
+                                <h3 class="text-xl sm:text-2xl font-bold text-white group-hover:text-cyan-300 transition-colors">3. თემატური ბლოგის პლატფორმა</h3>
+                                <span class="w-10 h-10 rounded-2xl bg-cyan-950/80 text-cyan-400 border border-cyan-500/30 font-mono text-xs font-bold flex items-center justify-center shadow-glow-cyan">03</span>
+                            </div>
+                            <p class="text-xs sm:text-sm text-slate-400">
+                                <small class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-navy-800 text-slate-300 font-medium border border-cyan-500/20">
+                                    კატეგორია: საინფორმაციო რესურსი · მიმართულება: ბლოგი
+                                </small>
+                            </p>
+                        </header>
+                        
+                        <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                            საინფორმაციო სტატიების, სიახლეებისა და მკითხველთა ინტერაქციისთვის განკუთვნილი თანამედროვე ვებ-პლატფორმა.
+                        </p>
+                    </div>
+
+                    <p class="mt-8 pt-5 border-t border-slate-700/50">
+                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-medium text-xs sm:text-sm transition-all shadow-glow-cyan hover:shadow-card-hover">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path>
+                            </svg>
+                            <span>პროექტის კოდი GitHub-ზე &rarr;</span>
+                        </a>
+                    </p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <hr class="border-0 h-px bg-cyan-500/15 mt-10">
+
+    <!-- საიტის ქვედა ნაწილი -->
+    <footer class="bg-navy-950 py-10 border-t border-cyan-500/15 text-center">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+            <p class="text-sm text-slate-400 font-normal">&copy; 2026 ელენე ჭაბუკიანი. ყველა უფლება დაცულია.</p>
+            <p class="text-xs sm:text-sm text-slate-500 font-medium space-x-1">
+                <a href="index.html" class="text-slate-400 hover:text-cyan-400 transition-colors">მთავარი</a> <span class="text-slate-700">·</span> 
+                <a href="about.html" class="text-slate-400 hover:text-cyan-400 transition-colors">ჩემ შესახებ</a> <span class="text-slate-700">·</span> 
+                <a href="projects.html" class="text-cyan-400 hover:text-cyan-300 transition-colors font-semibold">პროექტები</a> <span class="text-slate-700">·</span> 
+                <a href="employees.html" class="text-slate-400 hover:text-cyan-400 transition-colors">თანამშრომლები</a> <span class="text-slate-700">·</span> 
+                <a href="contact.html" class="text-slate-400 hover:text-cyan-400 transition-colors">კონტაქტი</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- გლობალური JavaScript სკრიპტი (ბურგერ მენიუ, ხელმისაწვდომობა) -->
+    <script src="main.js"></script>
+
+</body>
+</html>
